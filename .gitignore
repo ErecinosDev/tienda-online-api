@@ -1,0 +1,22 @@
+# Documentación local de apoyo para Codex
+/AGENTS.md
+/docs/
+
+# Credenciales y configuración privada
+.env
+.env.*
+!.env.example
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven
+/target/
+
+# Archivos temporales
+*.log
+*.tmp
