@@ -8,6 +8,7 @@
 application-local.properties
 application-local.yml
 application-local.yaml
+src/test/resources/application-test-local.properties
 
 # IntelliJ IDEA
 .idea/
@@ -15,6 +16,7 @@ application-local.yaml
 
 # Maven
 /target/
+/.m2/
 
 # Archivos temporales
 *.log

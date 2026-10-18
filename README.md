@@ -22,7 +22,7 @@ API RESTful para la administración de productos, gestión de carritos de compra
 
 ## Estado del proyecto
 
-Actualmente en preparación para la implementación.
+Catálogo, carrito anónimo, compras simuladas y Factory Method JDBC se encuentran en implementación.
 
 El análisis, diseño y esquema MySQL fueron definidos previamente. La implementación Java se realizará por funcionalidades utilizando Git, GitHub y Codex.
 
@@ -31,3 +31,16 @@ El análisis, diseño y esquema MySQL fueron definidos previamente. La implement
 Los scripts SQL de configuración se encuentran en la carpeta `database/`.
 
 La aplicación utilizará el esquema `tienda_online`.
+
+## Endpoints
+
+- `GET /api/productos`, `GET /api/productos/{id}`, `POST`, `PUT` y `DELETE /api/productos/{id}`
+- `GET /api/carrito`
+- `POST /api/carrito/productos`
+- `PUT` y `DELETE /api/carrito/productos/{idProducto}`
+- `POST /api/compras`
+
+## Simulación de pagos
+
+Los escenarios se controlan localmente con `pagos.tarjeta.escenario` y
+`pagos.paypal.escenario`: `APROBADO`, `RECHAZADO` o `ERROR_TECNICO`.

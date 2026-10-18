@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,26 +26,61 @@ public class Producto {
     @Column(name = "id_producto")
     private Integer idProducto;
 
-    @Column(name = "codigo", nullable = false, unique = true, length = 50)
+    @Column(
+            name = "codigo",
+            nullable = false,
+            unique = true,
+            length = 50
+    )
     private String codigo;
 
-    @Column(name = "nombre", nullable = false, length = 150)
+    @Column(
+            name = "nombre",
+            nullable = false,
+            length = 150
+    )
     private String nombre;
 
-    @Column(name = "precio", nullable = false, precision = 12, scale = 2)
+    @Column(
+            name = "precio",
+            nullable = false,
+            precision = 12,
+            scale = 2
+    )
     private BigDecimal precio;
 
     @Column(name = "stock", nullable = false)
     private Integer stock;
 
-    public Producto(String codigo, String nombre, BigDecimal precio, Integer stock) {
+    public Producto(
+            String codigo,
+            String nombre,
+            BigDecimal precio,
+            Integer stock) {
+
         actualizarDatos(codigo, nombre, precio, stock);
     }
 
-    public void actualizarDatos(String codigo, String nombre, BigDecimal precio, Integer stock) {
+    public void actualizarDatos(
+            String codigo,
+            String nombre,
+            BigDecimal precio,
+            Integer stock) {
+
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
+    }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "idProducto=" + idProducto +
+                ", codigo='" + codigo + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", precio=" + precio +
+                ", stock=" + stock +
+                '}';
     }
 }

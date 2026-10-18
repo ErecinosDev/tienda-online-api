@@ -14,7 +14,10 @@ public interface IProductoService {
 
     ProductoResponseDTO crear(CrearProductoRequestDTO request);
 
-    ProductoResponseDTO actualizar(Integer idProducto, ActualizarProductoRequestDTO request);
+    ProductoResponseDTO actualizar(
+            Integer idProducto,
+            ActualizarProductoRequestDTO request
+    );
 
     void eliminar(Integer idProducto);
 }

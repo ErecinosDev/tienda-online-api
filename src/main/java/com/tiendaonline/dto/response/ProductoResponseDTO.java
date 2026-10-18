@@ -1,3 +1,4 @@
+
 package com.tiendaonline.dto.response;
 
 import lombok.AllArgsConstructor;
@@ -10,8 +11,12 @@ import java.math.BigDecimal;
 public class ProductoResponseDTO {
 
     private final Integer idProducto;
+
     private final String codigo;
+
     private final String nombre;
+
     private final BigDecimal precio;
+
     private final Integer stock;
 }

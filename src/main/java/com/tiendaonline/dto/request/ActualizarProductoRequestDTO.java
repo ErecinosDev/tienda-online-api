@@ -1,3 +1,4 @@
+
 package com.tiendaonline.dto.request;
 
 import jakarta.validation.constraints.DecimalMin;
@@ -6,6 +7,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,8 +28,15 @@ public class ActualizarProductoRequestDTO {
     private String nombre;
 
     @NotNull(message = "El precio es obligatorio")
-    @DecimalMin(value = "0.00", message = "El precio no puede ser negativo")
-    @Digits(integer = 10, fraction = 2, message = "El precio debe tener hasta 10 enteros y 2 decimales")
+    @DecimalMin(
+            value = "0.00",
+            message = "El precio no puede ser negativo"
+    )
+    @Digits(
+            integer = 10,
+            fraction = 2,
+            message = "El precio debe tener hasta 10 enteros y 2 decimales"
+    )
     private BigDecimal precio;
 
     @NotNull(message = "El stock es obligatorio")
